@@ -15,8 +15,12 @@ public class Main extends Application {
 			Parent root = FXMLLoader.load(getClass().getResource("menu.fxml"));
 			Scene scene = new Scene(root);
 			scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
+			
+			primaryStage.setTitle("TetrisClone");
+			
 			primaryStage.setScene(scene);
 			primaryStage.show();
+			
 		} catch(Exception e) {
 			e.printStackTrace();
 		}
@@ -26,3 +30,5 @@ public class Main extends Application {
 		launch(args);
 	}
 }
+//TODO
+//create an icon for application
