@@ -20,10 +20,10 @@ public class GameController {
 	@FXML
 	public void initialize(){ // runs upon opening of fxml
 		System.out.println("test");
-		int Lidx = makeLShape();
-		currentIdx = Lidx;
-//		int FLidx = makeFourLongShape();
+//		int Lidx = makeLShape();
 		
+		int FLidx = makeFourLongShape();
+		currentIdx = FLidx;
 		int temp = 0;
 		
 		int[][] solid = new int[8][10]; // x,y 8 is max width, 10 is made up height
@@ -32,8 +32,8 @@ public class GameController {
 		Timeline timeline = new Timeline(new KeyFrame(Duration.millis(16), event -> {
 			//this is game loop, put everything needing an update in here
 			if(frameCount/2 == 0) {
-				if(((Group)ap.getChildren().get(Lidx)).getTranslateY() < LShape.bottomBound + temp)((Group)ap.getChildren().get(Lidx)).setTranslateY(((Group)ap.getChildren().get(Lidx)).getTranslateY() +1);
-//				if(((Group)ap.getChildren().get(FLidx)).getTranslateY() < FourLongShape.bottomBound + temp)((Group)ap.getChildren().get(FLidx)).setTranslateY(((Group)ap.getChildren().get(FLidx)).getTranslateY() +1);
+//				if(((Group)ap.getChildren().get(Lidx)).getTranslateY() < LShape.bottomBound + temp)((Group)ap.getChildren().get(Lidx)).setTranslateY(((Group)ap.getChildren().get(Lidx)).getTranslateY() +1);
+				if(((Group)ap.getChildren().get(FLidx)).getTranslateY() < FourLongShape.bottomBound + temp)((Group)ap.getChildren().get(FLidx)).setTranslateY(((Group)ap.getChildren().get(FLidx)).getTranslateY() +1);
 				frameCount = 0;
 			}
 			
